@@ -1,0 +1,29 @@
+/** Please add a class description */
+UCLASS(Blueprintable, BlueprintType)
+class UBP_StaminaSystem : public UActorComponent
+{
+	GENERATED_BODY()
+public:
+	/** Please add a function description */
+	UFUNCTION(BlueprintCallable)
+	void TickStamina();
+
+	/** Please add a function description */
+	UFUNCTION(BlueprintCallable)
+	void StartTickStamina();
+
+	/** Please add a function description */
+	UFUNCTION(BlueprintCallable)
+	void StopTickStamina();
+
+	/** Please add a function description */
+	UFUNCTION(BlueprintCallable)
+	void SpendStamina(double Amount);
+
+	/** Please add a function description */
+	UFUNCTION(BlueprintCallable)
+	void PauseTickStamina(double Duration);
+public:
+	/** Please add a variable description */
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Default")
+	double Stamina;
