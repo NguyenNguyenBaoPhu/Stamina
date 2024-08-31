@@ -1,0 +1,30 @@
+/** Please add a class description */
+UCLASS(Blueprintable, BlueprintType)
+class UBP_SprintAbilityComponents : public UActorComponent
+{
+	GENERATED_BODY()
+public:
+	/** Please add a function description */
+	UFUNCTION(BlueprintCallable)
+	void StartSprint(UCharacterMovementComponent* CharacterMovement);
+
+	/** Please add a function description */
+	UFUNCTION(BlueprintCallable)
+	void StopSprint(UCharacterMovementComponent* CharacterMovement);
+public:
+	/** Please add a variable description */
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Default")
+	double SprintSpeed;
+
+	/** Please add a variable description */
+	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Category="Default")
+	bool IsSprinting;
+
+	/** Please add a variable description */
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Default")
+	double WalkSpeed;
+
+	/** Please add a variable description */
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Default")
+	double StaminaCostPerSecond;
+};
